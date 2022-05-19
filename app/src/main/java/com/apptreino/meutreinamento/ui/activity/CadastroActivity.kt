@@ -103,7 +103,7 @@ class CadastroActivity : AppCompatActivity() {
     }
 
     private fun configurarTextFields() {
-        binding.cadastroCpfCnpjCampo.addTextChangedListener(EditTextMask.insert(binding.cadastroCpfCnpjCampo))
+        binding.cadastroCpfCnpjCampo.addTextChangedListener(MaskUtil.insert(MaskUtil.CPF, binding.cadastroCpfCnpjCampo))
         binding.cadastroTelefoneCampo.addTextChangedListener(MaskUtil.insert(MaskUtil.CELULAR, binding.cadastroTelefoneCampo))
         binding.cadastroDataCampo.addTextChangedListener(MaskUtil.insert(MaskUtil.DATA, binding.cadastroDataCampo))
     }
