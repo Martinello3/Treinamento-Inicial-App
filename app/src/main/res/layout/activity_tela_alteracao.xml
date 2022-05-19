@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/titulo_tela_alterar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/titulo_tela_alterar"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/progressBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@id/layoutTextInputCpf"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titulo_tela_alterar" />
+
+        <!--CPF-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutTextInputCpf"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@id/progressBar">
+
+            <EditText
+                android:id="@+id/edit_cpf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/hint_cpf_cnpj"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--NOME-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutTextInputNome"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@id/layoutTextInputCpf">
+
+            <EditText
+                android:id="@+id/edit_nome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/hint_nome"
+                android:importantForAutofill="no"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--EMAIL-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutTextInputEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTextInputNome">
+
+            <EditText
+                android:id="@+id/edit_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_email"
+                android:importantForAutofill="no"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--DATA DE NASCIMENTO-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutTextInputData"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTextInputEmail">
+
+            <EditText
+                android:id="@+id/edit_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_data"
+                android:importantForAutofill="no"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--TELEFONE-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutTextInputTelefone"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTextInputData">
+
+            <EditText
+                android:id="@+id/edit_telefone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_telefone"
+                android:importantForAutofill="no"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTextInputTelefone">
+
+            <Button
+                android:id="@+id/button_cancel"
+                style="@style/MaterialAlertDialog.Material3"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/space_button_cancel" />
+
+            <Button
+                android:id="@+id/button_update"
+                style="@style/MaterialAlertDialog.Material3"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/space_button_confirm" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

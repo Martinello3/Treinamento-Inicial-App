@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.activity.CadastroActivity">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="25dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--CPF_CNPJ-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cadastro_cpf_cnpj_campo_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cadastro_cpf_cnpj_campo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_cpf_cnpj"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--DATA DE NASCIMENTO-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cadastro_data_campo_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cadastro_cpf_cnpj_campo_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cadastro_data_campo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_data"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--NOME-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cadastro_nome_campo_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="28dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cadastro_data_campo_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cadastro_nome_campo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_nome"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--EMAIL-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cadastro_email_campo_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="28dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cadastro_nome_campo_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cadastro_email_campo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--TELEFONE-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cadastro_telefone_campo_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="28dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cadastro_email_campo_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cadastro_telefone_campo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_telefone"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--SENHA-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cadastro_senha_campo_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cadastro_telefone_campo_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cadastro_senha_campo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_senha"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:id="@+id/cadastro_confirma_senha_campo_layout"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="28dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_marginEnd="28dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/cadastro_senha_campo_layout">-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/cadastro_confirma_senha_campo"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="Confirma Senha"-->
+<!--                android:inputType="textPassword" />-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <Button
+            android:id="@+id/botao_proximo"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="28dp"
+            android:text="@string/botao_proximo"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/MaterialAlertDialog.Material3"
+            android:backgroundTint="@color/red"
+            app:layout_constraintTop_toBottomOf="@+id/cadastro_senha_campo_layout" />
+
+        <ImageView
+            android:id="@+id/voltar_login"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:rotationY="-170"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="10dp"
+            app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

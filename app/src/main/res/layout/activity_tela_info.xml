@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/plano_de_fundo"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:contentDescription="@string/image_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background" />
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/plano_de_fundo2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="365dp"-->
+<!--        android:contentDescription="@string/image_background"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/plano_de_fundo"-->
+<!--        app:srcCompat="@drawable/background" />-->
+    <!--        <TextView-->
+    <!--            android:id="@+id/tipo_info"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="10dp"-->
+    <!--            android:layout_marginTop="50dp"-->
+    <!--            android:textSize="20sp"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/foto_usuario"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/titulo_pag"-->
+    <!--            tools:text="Aluno,"></TextView>-->
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/plano_de_fundo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/plano_de_fundo">
+
+        <Button
+            android:id="@+id/botao_alterar_dados"
+            style="@style/MaterialAlertDialog.Material3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/red"
+            android:text="@string/space_button_update"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto_medium"
+            app:layout_constraintBottom_toBottomOf="@+id/plano_de_fundo"
+            app:layout_constraintEnd_toStartOf="@+id/botao_sair"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plano_de_fundo" />
+
+        <Button
+            android:id="@+id/botao_sair"
+            style="@style/MaterialAlertDialog.Material3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/red"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/space_button_exit"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/plano_de_fundo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plano_de_fundo" />
+    </LinearLayout>
+
+
+    <!--NOME-->
+    <TextView
+        android:id="@+id/nome_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_medium"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@id/plano_de_fundo"
+        app:layout_constraintEnd_toEndOf="@id/plano_de_fundo"
+        app:layout_constraintStart_toStartOf="@id/text_fixo_usuario"
+        app:layout_constraintTop_toBottomOf="@id/titulo_pag"
+        tools:text="Wilson Fernandes Cordova" />
+
+    <TextView
+        android:id="@+id/text_fixo_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/text_fix_usuario"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/nome_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo_pag" />
+
+    <!--CPF-->
+    <TextView
+        android:id="@+id/cpf_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_medium"
+        android:lines="1"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/img_cpf"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout"
+        tools:text="095.187.479-97" />
+
+    <TextView
+        android:id="@+id/text_fixo_cpf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/subtext_cpf"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/img_cpf"
+        app:layout_constraintTop_toBottomOf="@+id/cpf_info" />
+
+    <ImageView
+        android:id="@+id/img_cpf"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_margin="15dp"
+        android:layout_marginTop="36dp"
+        android:contentDescription="@string/img_cpf_app"
+        app:layout_constraintEnd_toStartOf="@+id/cpf_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout"
+        app:srcCompat="@android:drawable/ic_dialog_info"
+        app:tint="@color/red" />
+
+
+    <!--DATA DE NASCIMENTO-->
+    <ImageView
+        android:id="@+id/data_nasc_img"
+        android:layout_width="45dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="45dp"
+        android:contentDescription="@string/img_data"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_cpf"
+        app:srcCompat="@android:drawable/ic_menu_my_calendar"
+        app:tint="@color/red" />
+
+    <TextView
+        android:id="@+id/text_fixo_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/hint_data"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/data_nasc_img"
+        app:layout_constraintTop_toBottomOf="@+id/data_nasc_info" />
+
+    <TextView
+        android:id="@+id/data_nasc_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/roboto_medium"
+        android:lines="1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/data_nasc_img"
+        app:layout_constraintStart_toEndOf="@+id/data_nasc_img"
+        app:layout_constraintTop_toBottomOf="@+id/text_fixo_cpf"
+        tools:text="11/01/2021" />
+
+    <!--TELEFONE-->
+    <ImageView
+        android:id="@+id/phone_img"
+        android:layout_width="35dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="45dp"
+        android:contentDescription="@string/img_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/data_nasc_img"
+        app:srcCompat="@android:drawable/stat_sys_phone_call"
+        app:tint="@color/red" />
+
+    <TextView
+        android:id="@+id/text_fixo_telefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/hint_telefone"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/phone_img"
+        app:layout_constraintTop_toBottomOf="@+id/phone_info" />
+
+    <TextView
+        android:id="@+id/phone_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/roboto_medium"
+        android:lines="1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/phone_img"
+        app:layout_constraintStart_toEndOf="@+id/phone_img"
+        app:layout_constraintTop_toBottomOf="@+id/text_fixo_data"
+        tools:text="(48) 99888-1038" />
+
+    <!--Email-->
+    <TextView
+        android:id="@+id/email_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_medium"
+        android:lines="1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/email_img"
+        app:layout_constraintStart_toEndOf="@+id/email_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_fixo_telefone"
+        tools:text="wilsonfernandes3822@gmail.com" />
+
+    <TextView
+        android:id="@+id/text_fixo_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/hint_email"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/email_img"
+        app:layout_constraintTop_toBottomOf="@+id/email_info" />
+
+    <ImageView
+        android:id="@+id/email_img"
+        android:layout_width="35dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/img_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_img"
+        app:srcCompat="@android:drawable/ic_dialog_email"
+        app:tint="@color/red" />
+
+    <!--TÍTULO DA PÁGINA-->
+    <TextView
+        android:id="@+id/titulo_pag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/title_info_screen"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/instituicao_img"-->
+    <!--            android:layout_width="35dp"-->
+    <!--            android:layout_height="41dp"-->
+    <!--            android:layout_marginStart="16dp"-->
+    <!--            android:layout_marginTop="45dp"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/data_nasc_img"-->
+    <!--            app:srcCompat="@android:drawable/ic_dialog_map"></ImageView>-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/text_fixo_instituicao"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="10dp"-->
+    <!--            android:layout_marginTop="2dp"-->
+    <!--            android:text="Instituição"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/instituicao_img"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/instituicao_info">-->
+
+    <!--        </TextView>-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/instituicao_info"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="10dp"-->
+    <!--            android:layout_marginTop="56dp"-->
+    <!--            android:lines="1"-->
+    <!--            android:textSize="20sp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintBottom_toTopOf="@+id/instituicao_img"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/instituicao_img"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/text_fixo_data"-->
+    <!--            tools:text="IFSC Campus - Lages"></TextView>-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/matricula_img"-->
+    <!--            android:layout_width="35dp"-->
+    <!--            android:layout_height="41dp"-->
+    <!--            android:layout_marginStart="16dp"-->
+    <!--            android:layout_marginTop="45dp"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/instituicao_img"-->
+    <!--            app:srcCompat="?attr/actionModePasteDrawable"></ImageView>-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/text_fixo_matricula"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="10dp"-->
+    <!--            android:layout_marginTop="2dp"-->
+    <!--            android:text="Matrícula"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/matricula_img"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/matricula_info">-->
+
+    <!--        </TextView>-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/matricula_info"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="10dp"-->
+    <!--            android:layout_marginTop="56dp"-->
+    <!--            android:lines="1"-->
+    <!--            android:textSize="20sp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintBottom_toTopOf="@+id/matricula_img"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/matricula_img"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/text_fixo_instituicao"-->
+    <!--            tools:text="15734876755767"></TextView>-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/ano_img"-->
+    <!--            android:layout_width="52dp"-->
+    <!--            android:layout_height="50dp"-->
+    <!--            android:layout_marginStart="10dp"-->
+    <!--            android:layout_marginTop="44dp"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/matricula_img"-->
+    <!--            app:srcCompat="@android:drawable/ic_menu_day"></ImageView>-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/text_fixo_ano"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="10dp"-->
+    <!--            android:layout_marginTop="2dp"-->
+    <!--            android:text="Ano Ingresso"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/ano_img"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/ano_info">-->
+
+    <!--        </TextView>-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/ano_info"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="10dp"-->
+    <!--            android:layout_marginTop="56dp"-->
+    <!--            android:lines="1"-->
+    <!--            android:textSize="20sp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintBottom_toTopOf="@+id/ano_img"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/ano_img"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/text_fixo_matricula"-->
+    <!--            tools:text="2020"></TextView>-->
+
+    <ImageView
+        android:id="@+id/divisor"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/divisor_version"
+        app:layout_constraintBottom_toTopOf="@id/versao_img"
+        app:layout_constraintTop_toBottomOf="@+id/text_fixo_email"
+        app:srcCompat="@drawable/divisor" />
+
+    <ImageView
+        android:id="@+id/versao_img"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:contentDescription="@string/img_version_app"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divisor"
+        app:srcCompat="@android:drawable/ic_menu_send"
+        app:tint="@color/red" />
+
+    <TextView
+        android:id="@+id/text_fixo_versao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/subtext_version"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/versao_img"
+        app:layout_constraintTop_toBottomOf="@+id/versao_info">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/versao_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/roboto_medium"
+        android:lines="1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/versao_img"
+        app:layout_constraintStart_toEndOf="@+id/versao_img"
+        app:layout_constraintTop_toBottomOf="@+id/divisor"
+        tools:text="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
