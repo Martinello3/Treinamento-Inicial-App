@@ -1,19 +1,17 @@
 package com.apptreino.meutreinamento.ui.activity
 
-import android.app.AlertDialog
-import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.apptreino.meutreinamento.databinding.ActivityTelaAlteracaoBinding
-import com.apptreino.meutreinamento.databinding.DialogProgressBarBinding
 import com.apptreino.meutreinamento.model.User
-import com.apptreino.meutreinamento.util.*
-import com.apptreino.meutreinamento.util.EditTextMask
+import com.apptreino.meutreinamento.util.DataUtil
+import com.apptreino.meutreinamento.util.MaskUtil
+import com.apptreino.meutreinamento.util.isCPF
+import com.apptreino.meutreinamento.util.unmask
 import com.apptreino.meutreinamento.webService.UsuarioRepositorio
-import com.google.android.material.snackbar.Snackbar
 import io.reactivex.observers.DisposableObserver
 import java.util.*
 
@@ -103,7 +101,7 @@ class AlteraActivity : AppCompatActivity() {
     }
 
     private fun configurarTextFields() {
-        binding.editCpf.addTextChangedListener(EditTextMask.insert(binding.editCpf))
+        binding.editCpf.addTextChangedListener(MaskUtil.insert(MaskUtil.CPF, binding.editCpf))
         binding.editData.addTextChangedListener(MaskUtil.insert(MaskUtil.DATA, binding.editData))
     }
 

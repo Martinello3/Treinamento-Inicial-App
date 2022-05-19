@@ -1,20 +1,17 @@
 package com.apptreino.meutreinamento.ui.login
 
 // COPIA
-import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.apptreino.meutreinamento.databinding.ActivityTelaLoginBinding
-import com.apptreino.meutreinamento.databinding.DialogProgressBarBinding
 import com.apptreino.meutreinamento.extensions.vaiPara
 import com.apptreino.meutreinamento.model.User
 import com.apptreino.meutreinamento.ui.activity.CadastroActivity
 import com.apptreino.meutreinamento.ui.activity.InfoActivity
-import com.apptreino.meutreinamento.util.CommunUtil
-import com.apptreino.meutreinamento.util.EditTextMask
+import com.apptreino.meutreinamento.util.MaskUtil
 import com.apptreino.meutreinamento.util.isCPF
 import com.apptreino.meutreinamento.util.unmask
 import com.apptreino.meutreinamento.webService.UsuarioRepositorio
@@ -23,7 +20,8 @@ import io.reactivex.observers.DisposableObserver
 
 class LoginActivity : AppCompatActivity() {
 
-    private var loadingProgressBar : Dialog? = null
+//    Dialog de progresso
+//    private var loadingProgressBar : Dialog? = null
 
     private val binding by lazy {
         ActivityTelaLoginBinding.inflate(layoutInflater)
@@ -73,17 +71,17 @@ class LoginActivity : AppCompatActivity() {
 
     private fun showDialogProgress() {
         hideDialogProgress()
-        loadingProgressBar = CommunUtil.showLoadingDialog(this)
-//        binding.progressBar.visibility = View.VISIBLE
+//        loadingProgressBar = CommunUtil.showLoadingDialog(this)
+        binding.progressBar.visibility = View.VISIBLE
     }
 
     private fun hideDialogProgress() {
-        loadingProgressBar?.let { if (it.isShowing)it.cancel() }
-//        binding.progressBar.visibility = View.INVISIBLE
+//        loadingProgressBar?.let { if (it.isShowing)it.cancel() }
+        binding.progressBar.visibility = View.INVISIBLE
     }
 
     private fun configurarTextFields() {
-        binding.cpfCnpjCampoLogin.addTextChangedListener(EditTextMask.insert(binding.cpfCnpjCampoLogin))
+        binding.cpfCnpjCampoLogin.addTextChangedListener(MaskUtil.insert(MaskUtil.CPF, binding.cpfCnpjCampoLogin))
     }
 
     private fun botaoCadastrar() {

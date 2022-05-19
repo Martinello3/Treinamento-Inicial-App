@@ -1,10 +1,11 @@
-package com.apptreino.meutreinamento.util
+package com.apptreino.meutreinamento.util.estudo
 
 import android.widget.EditText
 import android.text.TextWatcher
 import android.text.Editable
 import java.lang.Exception
 
+//MATERIAL DE ESTUDO
 internal object EditTextMask {
     private const val maskCNPJ = "##.###.###/####-##"
     private const val maskCPF = "###.###.###-##"

@@ -103,7 +103,7 @@ class CadastroActivity : AppCompatActivity() {
     }
 
     private fun configurarTextFields() {
-        binding.cadastroCpfCnpjCampo.addTextChangedListener(EditTextMask.insert(binding.cadastroCpfCnpjCampo))
+        binding.cadastroCpfCnpjCampo.addTextChangedListener(MaskUtil.insert(MaskUtil.CPF, binding.cadastroCpfCnpjCampo))
         binding.cadastroTelefoneCampo.addTextChangedListener(MaskUtil.insert(MaskUtil.CELULAR, binding.cadastroTelefoneCampo))
         binding.cadastroDataCampo.addTextChangedListener(MaskUtil.insert(MaskUtil.DATA, binding.cadastroDataCampo))
     }
@@ -118,7 +118,7 @@ class CadastroActivity : AppCompatActivity() {
             return false
         }
 
-        if (binding.cadastroDataCampo.text!!.isNullOrEmpty()) {
+        if (binding.cadastroDataCampo.text.isNullOrEmpty()) {
             binding.cadastroDataCampo.error = "Informe uma data para continuar o cadastro"
             return false
         }
@@ -136,12 +136,12 @@ class CadastroActivity : AppCompatActivity() {
             return false
         }
 
-       if (binding.cadastroEmailCampo.text!!.isNullOrEmpty()) {
+       if (binding.cadastroEmailCampo.text.isNullOrEmpty()) {
            binding.cadastroEmailCampo.error = "Informe um email para continuar o cadastro"
            return false
        }
 
-        if (binding.cadastroTelefoneCampo.text!!.isNullOrEmpty()) {
+        if (binding.cadastroTelefoneCampo.text.isNullOrEmpty()) {
             binding.cadastroTelefoneCampo.error = "Informe um telefone para continuar o cadastro"
             return false
         }
