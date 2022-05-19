@@ -20,7 +20,7 @@ import com.apptreino.meutreinamento.util.unmask
 import com.apptreino.meutreinamento.webService.UsuarioRepositorio
 import io.reactivex.observers.DisposableObserver
 
-
+// Teste 2
 class LoginActivity : AppCompatActivity() {
 
     private var loadingProgressBar : Dialog? = null
