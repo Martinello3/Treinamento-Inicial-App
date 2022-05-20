@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1044397705434",
+    "project_id": "app-de-treinamento-7e64f",
+    "storage_bucket": "app-de-treinamento-7e64f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044397705434:android:aafccf543563d2b8c53de3",
+        "android_client_info": {
+          "package_name": "com.apptreino.meutreinamento"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044397705434-i9tvfo5sm6am3bedki88u23tmqqe4rkj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCENqQ3109EdSovuawbbJGnVx0BxcwIVPY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044397705434-i9tvfo5sm6am3bedki88u23tmqqe4rkj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
